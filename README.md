@@ -1,6 +1,7 @@
 Kaibo's dMRI pipeline
 =====================
 
+
 Dependencies
 ------------
 * DIPY
@@ -22,6 +23,7 @@ To install `jq`, run the following command:
 or
 
     brew install jq
+
 
 Usage
 -----
@@ -78,6 +80,7 @@ Internally, the pipeline performs the following steps:
 2. Motion Correction using `eddy`
 3. Skull stripping using `mri_synthstrip`
 4. DTI, DKI fitting using DIPY and NODDI fitting using AMICO
+
 
 Example
 -------

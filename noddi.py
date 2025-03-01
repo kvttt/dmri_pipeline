@@ -10,6 +10,7 @@ if __name__ == "__main__":
     mask = sys.argv[5]
     scheme = sys.argv[6]
 
+    amico.setup()
     ae = amico.Evaluation(output_path=folder)
     ae.set_config('DTI_fit_method', 'WLS')
     amico.util.fsl2scheme(bvals, bvecs, scheme)

@@ -3,7 +3,7 @@
 set -e
 
 usage() {
-    echo
+    echo "----------------------------------------------------------------------"
     echo "Kaibo's dMRI pipeline"
     echo "Fits DTI, DKI, and NODDI"
     echo
