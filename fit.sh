@@ -16,7 +16,6 @@ usage() {
     echo "  -4 model     run step 4: fit"
     echo "               expect model to be one of dti, dki, noddi, all"
     echo "  -h, --help"
-    echo 
     echo "----------------------------------------------------------------------"
     echo "Script written by:"
     echo "----------------------------------------------------------------------"

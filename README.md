@@ -11,24 +11,27 @@ Dependencies
 * jq
 
 You can install the dependencies by running the following command in a terminal:
-
-    pip install dipy dmri-amico
+```bash
+pip install dipy dmri-amico
+```
 
 For [FSL](https://web.mit.edu/fsl_v5.0.10/fsl/doc/wiki/FslInstallation.html) and [FreeSurfer](https://surfer.nmr.mgh.harvard.edu/fswiki/DownloadAndInstall), please refer to their respective installation instructions.
 
 To install `jq`, run the following command:
-
-    sudo apt-get install jq
+```bash
+sudo apt-get install jq
+```
 
 or
-
-    brew install jq
+```bash
+brew install jq
+```
 
 
 Usage
 -----
 
-
+    ----------------------------------------------------------------------
     Kaibo's dMRI pipeline
     Fits DTI, DKI, and NODDI
 
@@ -41,7 +44,6 @@ Usage
     -4 model     run step 4: fit
                 expect model to be one of dti, dki, noddi, all
     -h, --help
-
     ----------------------------------------------------------------------
     Script written by:
     ----------------------------------------------------------------------
@@ -60,10 +62,6 @@ Before running the pipeline, organize your data in the following structure:
     └── subid.json
 
 where `subid.nii` is the dMRI data, `subid.bval` and `subid.bvec` are the b-values and b-vectors, and `subid.json` is the JSON file containing the acquisition parameters.
-
-Then, run the pipeline with the following command:
-
-    bash fit.sh data subid.nii subid.bval subid.bvec subid.json
 
 The pipeline will output the following folders
 
@@ -85,13 +83,16 @@ Internally, the pipeline performs the following steps:
 Example
 -------
 To run the full pipeline and fit all models, run the following command:
-
-    bash ./fit.sh data subid.nii subid.bval subid.bvec subid.json -1234 all
+```bash
+bash ./fit.sh data subid.nii subid.bval subid.bvec subid.json -1234 all
+```
 
 To only run denoising, motion correction, and skull stripping, run the following command:
-
-    bash ./fit.sh data subid.nii subid.bval subid.bvec subid.json -123
+```bash
+bash ./fit.sh data subid.nii subid.bval subid.bvec subid.json -123
+```
 
 To only fit the DTI model, run the following command:
-
-    bash ./fit.sh data subid.nii subid.bval subid.bvec subid.json -4 dti
+```bash
+bash ./fit.sh data subid.nii subid.bval subid.bvec subid.json -4 dti
+```
